@@ -1,0 +1,8 @@
+<mat-toolbar color="primary">
+    <img [src]="logo" [style.width.px]="width" (click)="logSrc(logo)" alt="">
+    <h3>{{title}}</h3>
+
+    <mat-form-field class="example-full-width">
+        <input matInput #inputEl (input)="getVal(inputEl.value)">
+    </mat-form-field>
+</mat-toolbar>
