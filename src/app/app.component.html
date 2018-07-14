@@ -5,4 +5,11 @@
     (search)="searchTerm = $event"></app-search>
 </app-header>
 
-<pre *ngIf="users$ | async">{{users | json }}</pre>
+<pre *ngIf="users$ | async as users; else loaderBlock">
+  {{users | json }}</pre>
+
+<ng-template #loaderBlock class="loader__center">
+  <div>
+    <img [src]="loader" alt="">
+  </div>
+</ng-template>

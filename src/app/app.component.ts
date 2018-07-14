@@ -15,6 +15,7 @@ export class AppComponent implements OnInit {
   public width = 50;
   public title = 'My Angular App';
   public text = 'Search user';
+  public loader = 'assets/images/loader.gif';
   public users$: Observable<IUsers[ ]> = users$;
 
   public users: IUsers[ ];

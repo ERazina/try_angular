@@ -113,5 +113,5 @@ const users: IUsers[ ] = [
 
   export const users$: Observable<IUsers[ ]> = of (users)
     .pipe(
-        delay( 3000)
+        delay( 5000)
     );
