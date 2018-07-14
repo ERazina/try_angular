@@ -1,0 +1,7 @@
+<mat-card>
+  <mat-card-header>
+    <div class="position">{{position}}</div>
+    <img *ngIf="user.photo" [src]="user.photo" class="avatar">
+    <div class="name">{{user.firstName}} {{user.surname}}</div>
+  </mat-card-header>
+</mat-card>

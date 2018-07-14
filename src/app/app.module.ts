@@ -7,19 +7,23 @@ import { HeaderComponent } from './header/header.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { SearchComponent } from './search/search.component';
+import { CardComponent } from './card/card.component';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    SearchComponent
+    SearchComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
     NoopAnimationsModule,
     MatToolbarModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
