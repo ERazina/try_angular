@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import {users$} from './users';
+import {IUsers, users$} from './users';
 
 
 @Component({
@@ -15,12 +15,13 @@ export class AppComponent implements OnInit {
   public width = 50;
   public title = 'My Angular App';
   public text = 'Search user';
+  public users$: Observable<IUsers[ ]> = users$;
 
-  public users$: Observable<IUsers[]> = users$;
+  public users: IUsers[ ];
 
   public ngOnInit(): void {
-    this.users$.subscribe((users: IUsers[]) =>
-    console.log(users)
+    this.users$.subscribe((users: IUsers[ ]) =>
+    this.users = users
   ); }
 
 }

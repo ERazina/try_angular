@@ -1,7 +1,7 @@
 import { of, Observable } from 'rxjs';
 import { delay } from 'rxjs/internal/operators';
 
-export interface IUser {
+export interface IUsers {
     'profileName': string;
         'firstName': string;
         'surname': string;
@@ -9,7 +9,7 @@ export interface IUser {
         'country': string;
   }
 
-const users: IUsers[] = [
+const users: IUsers[ ] = [
     {
       'profileName': 'vladimir74',
       'firstName': 'Владимир',
@@ -111,7 +111,7 @@ const users: IUsers[] = [
     }
   ];
 
-  export const users$: Observable<IUser[]> = of(users)
+  export const users$: Observable<IUsers[ ]> = of (users)
     .pipe(
-        delay( 300)
+        delay( 3000)
     );
