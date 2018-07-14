@@ -5,4 +5,4 @@
     (search)="searchTerm = $event"></app-search>
 </app-header>
 
-<pre>{{users | json }}</pre>
+<pre *ngIf="users$ | async">{{users | json }}</pre>
