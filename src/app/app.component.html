@@ -5,9 +5,9 @@
     (search)="searchTerm = $event"></app-search>
 </app-header>
 
-<pre *ngIf="users$ | async as users; else loaderBlock">
-  {{users | json }}</pre>
-
+<div *ngIf="users$ | async as users; else loaderBlock">
+  <div *ngFor="let user of users; index as i">{{i+1}}. {{user.firstName}} {{user.surname}}</div>
+</div>
 <ng-template #loaderBlock class="loader__center">
   <div>
     <img [src]="loader" alt="">
