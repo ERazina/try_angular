@@ -6,10 +6,11 @@
 </app-header>
 
 <div *ngIf="users$ | async as users; else loaderBlock">
-  <app-card *ngFor="let user of users; index as i; odd as isOdd">
-    [position]="i+1"
-    [user]="user"
-    [isOdd]="isOdd"
+  <app-card *ngFor="let user of users; index as i; isOdd as isOdd"
+    [position]='i+1'
+    [user]='user'
+    [isOdd]='isOdd'
+  >
   </app-card>
 </div>
 <ng-template #loaderBlock class="loader__center">
