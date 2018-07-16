@@ -1,5 +1,5 @@
-<mat-card>
-  <mat-card-header [ngClass]="{background: isOdd}">
+<mat-card [ngClass]="{background: isOdd}">
+  <mat-card-header>
     <div class="position">{{position}}</div>
     <img *ngIf="user.photo" [src]="user.photo" class="avatar">
     <div class="name">{{user.firstName}} {{user.surname}} {{user.isOdd}}</div>
