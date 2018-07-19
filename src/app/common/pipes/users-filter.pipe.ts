@@ -1,6 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { IUsers } from '../../users';
-import { callbackify } from 'util';
 
 @Pipe({
   name: 'usersFilter'
@@ -11,10 +10,7 @@ export class UsersFilterPipe implements PipeTransform {
     if (!searchTerm) {
       return users;
     }
-    // return users.filter(callback (user: IUsers) => {
-    //   return `${user.firstName} ${user.surname}`.toLowerCase().includes(searchTerm)
-    // });
-    return users.filter(callbackify (user: IUsers) => {
+    return users.filter( (user: IUsers) => {
       return `${user.firstName} ${user.surname}`.toLowerCase().includes(searchTerm);
     });
   }
