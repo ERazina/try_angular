@@ -11,7 +11,7 @@ export class UsersFilterPipe implements PipeTransform {
       return users;
     }
     return users.filter( (user: IUsers) => {
-      return `${user.firstName} ${user.surname}`.toLowerCase().includes(searchTerm);
+      return `${user.firstName} ${user.surname}`.toLowerCase().includes(searchTerm.toLowerCase());
     });
   }
 
